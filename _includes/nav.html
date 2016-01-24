@@ -1,0 +1,13 @@
+  <header> 
+    <nav>
+      <div class="container">
+        <ul>
+          <li class="home"><a href="." {% if page.url == "/" %} class="active" {% endif %}><span>Home</span> <em>Sweet Home</em></a></li>
+          <li class="about"><a href="about" {% if page.url == "/about/" %} class="active" {% endif %}><span>About</span> <em>My Story</em></a></li>
+          <li class="portfolio"><a href="portfolio" {% if page.url == "/portfolio/" or page.layout == "portfolio" %} class="active" {% endif %}><span>Portfolio</span> <em>Selected Works</em></a></li>
+          <li class="contact"><a href="contact" {% if page.url == '/contact/' %} class="active" {% endif %}><span>Contact</span> <em>Get in Touch</em></a></li>
+        </ul>
+        <a href="#" class="nav-toggle" title="Navigation">Navigation <span id="switch"><span class="switchBar"></span><span class="switchBar"></span><span class="switchBar"></span></span></a>
+        <div id="logo"><a href="./"><img src="jonathanchen.png" alt="Jonathan Chen" /><span class="home"></span></a></div>
+      </div>
+    </nav><!-- /nav -->

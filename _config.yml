@@ -1,0 +1,7 @@
+# _config.yml
+name:         Jonathan Chen - UI/UX Designer and Front-end Developer
+description:  My Personal Site
+
+baseurl:      http://jonathanc.com
+permalink:    pretty
+exclude:      ["CNAME", "README.md", "Gemfile", "Gemfile.lock"]
