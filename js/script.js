@@ -170,10 +170,6 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 
-	// insert year for the footer
-	var thisYear = new Date().getFullYear();
-	$(".year").html(thisYear);
-			
 	// Why you like to resize window sizes
 	$(window).resize(function(){
 		sizeControls();
