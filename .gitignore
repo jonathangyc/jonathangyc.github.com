@@ -1,5 +1,10 @@
 # docs
 _site
 
+# ignore sawce
+_sawce
+sass
+
 # ...
 .DS_Store
+.sass-cache

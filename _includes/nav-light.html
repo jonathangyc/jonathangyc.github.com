@@ -1,0 +1,30 @@
+        <header>
+            <nav class="nav-light">
+                <a href="" class="logo">
+                    <span class="logo-frame"></span>
+                    <span class="logo-icon"></span>
+                </a>
+                <ul class="nav-left">
+                    <li{% if page.url == "/" %} class="active"{% endif %}><a href=".">Home</a></li>
+                    <li{% if page.url == "/portfolio/" or page.layout == "portfolio" or page.layout == "showcase" %} class="active"{% endif %}><a href="portfolio">Portfolio</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li{% if page.url == "/about/" %} class="active"{% endif %}><a href="about">About Me</a></li>
+                    <li{% if page.url == "/contact/" %} class="active"{% endif %}><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-sticky">
+                <a href="" class="logo">
+                    <span class="logo-frame"></span>
+                    <span class="logo-icon"></span>
+                </a>
+                <ul class="nav-left">
+                    <li{% if page.url == "/" %} class="active"{% endif %}><a href=".">Home</a></li>
+                    <li{% if page.url == "/portfolio/" or page.layout == "portfolio" or page.layout == "showcase" %} class="active"{% endif %}><a href="portfolio">Portfolio</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li{% if page.url == "/about/" %} class="active"{% endif %}><a href="about">About Me</a></li>
+                    <li{% if page.url == "/contact/" %} class="active"{% endif %}><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>

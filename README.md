@@ -1,4 +1,8 @@
 # my personal site
-portfolio site from the past. handcrafted in 2012 by yours truly; the code is a bit outdated but keep your eyes out for a new one. some code has been updated to get it working with github pages via jekyll.
+not complete yet, but it's coming along somewhat. designed and handcoded by yours truly.
 
-enjoy!
+## todo
+add some interactivity
+
+## fixes
+a lot

@@ -1,0 +1,61 @@
+/*
+Error: Invalid CSS after "sans-serif": expected expression (e.g. 1px, bold), was "; /* 1 *\/"
+        on line 10 of /Users/jonathangyc/Development/jonathangyc/jonathanc/sass/vendor/normalize.sass
+
+5:  * 2. Prevent iOS and IE text size adjust after device orientation change,
+6:  *    without disabling user zoom.
+7:  *\/
+8: 
+9: html {
+10:   font-family: sans-serif; /* 1 *\/
+11:   -ms-text-size-adjust: 100%; /* 2 *\/
+12:   -webkit-text-size-adjust: 100%; /* 2 *\/
+13: }
+14: 
+15: /**
+
+Backtrace:
+/Users/jonathangyc/Development/jonathangyc/jonathanc/sass/vendor/normalize.sass:10
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/lexer.rb:227:in `expected!'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/parser.rb:702:in `assert_done'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/parser.rb:64:in `parse'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/parser.rb:223:in `parse'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script.rb:27:in `parse'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:1145:in `parse_script'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:718:in `parse_property'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:689:in `parse_property_or_rule'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:655:in `parse_line'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:533:in `build_tree'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:552:in `block in append_children'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:551:in `each'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:551:in `append_children'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:542:in `block in build_tree'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:535:in `each'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:535:in `build_tree'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:552:in `block in append_children'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:551:in `each'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:551:in `append_children'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:406:in `_to_tree'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:471:in `on_file_changed'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/jonathangyc/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"sans-serif\": expected expression (e.g. 1px, bold), was \"; /* 1 */\"\A         on line 10 of /Users/jonathangyc/Development/jonathangyc/jonathanc/sass/vendor/normalize.sass\A \A 5:  * 2. Prevent iOS and IE text size adjust after device orientation change,\A 6:  *    without disabling user zoom.\A 7:  */\A 8: \A 9: html {\A 10:   font-family: sans-serif; /* 1 */\A 11:   -ms-text-size-adjust: 100%; /* 2 */\A 12:   -webkit-text-size-adjust: 100%; /* 2 */\A 13: }\A 14: \A 15: /**"; }
