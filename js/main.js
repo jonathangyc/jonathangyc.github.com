@@ -27,18 +27,19 @@ $(document).ready(function(){
         th = [], // .tidbits HEIGHT
         to = [], // .tidbits OFFSET TOP
         sd = []; // screen DISTANCE
-
-    for(i=0; i < $(".tidbits").length; i++){
-      // get the values for each existing .tidbits and .left
-      th[i] = $(".tidbits").eq(i).height();
-      to[i] = $(".tidbits").eq(i).offset().top;
-      co[i] = $(".tidbits .container").eq(i).offset().top - ltp;
-      lh[i] = $(".left").eq(i).height();
-      lw[i] = $(".left")[i].getBoundingClientRect().width;
-      // set corresponsding limits and distance
-      sd[i] = th[i] - lh[i];
-      ld[i] = sd[i] + to[i];
-    }
+    $(window).on("load", function(){ // but only fire once the images finish loading
+      for(i=0; i < $(".tidbits").length; i++){
+        // get the values for each existing .tidbits and .left
+        th[i] = $(".tidbits").eq(i).height();
+        to[i] = $(".tidbits").eq(i).offset().top;
+        co[i] = $(".tidbits .container").eq(i).offset().top - ltp;
+        lh[i] = $(".left").eq(i).height();
+        lw[i] = $(".left")[i].getBoundingClientRect().width;
+        // set corresponsding limits and distance
+        sd[i] = th[i] - lh[i];
+        ld[i] = sd[i] + to[i];
+      }
+    });
   }
 
   // why do people do this?
@@ -138,9 +139,11 @@ $(document).ready(function(){
   $(".londonmetro").parallax({imageSrc: "/img/p-lmdp.jpg"});
 
   // initialize with conditions
-  if($(".tidbits").length){
-    stickyInfo();
-  }
+  $(window).on("load", function(){
+    if($(".tidbits").length){
+      stickyInfo();
+    }
+  })  
   
   // only run imgCover if elements exist
   if( $(".portfolio-list").length ){
