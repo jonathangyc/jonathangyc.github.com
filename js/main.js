@@ -137,6 +137,21 @@ $(document).ready(function(){
   $(".gsp").parallax({imageSrc: "/img/gsp.jpg"});
   $(".londonmetro").parallax({imageSrc: "/img/p-lmdp.jpg"});
 
+  // initialize with conditions
+  if($(".tidbits").length){
+    stickyInfo();
+  }
+  
+  // only run imgCover if elements exist
+  if( $(".portfolio-list").length ){
+    for(i=0; i < $(".portfolio-list img").length; i++){
+      imgCoverEffect( $(".portfolio-list img")[i], {
+        alignX: "center",
+        alignY: "middle"
+      })
+    }
+  }
+
   $("a.scrolldown").click( function(e){
     e.preventDefault();
     if($("nav").css("position") == "fixed"){ // if sticky nav then scroll past it
@@ -170,19 +185,5 @@ $(document).ready(function(){
         scrolled = false;
     }
   }, 350);
-
-  // initialize with conditions
-  if($(".tidbits").length){
-    stickyInfo();
-  }
-  // only run imgCover if elements exist
-  if( $(".portfolio-list").length ){
-    for(i=0; i < $(".portfolio-list img").length; i++){
-      imgCoverEffect( $(".portfolio-list img")[i], {
-        alignX: "center",
-        alignY: "middle"
-      })
-    }
-  }
 
 });
