@@ -1,0 +1,56 @@
+.twitter {
+  background: url("/img/icon-twitter.svg") no-repeat center;
+}
+
+.github {
+  background: url("/img/icon-github.svg") no-repeat center;
+}
+
+.linkedin {
+  background: url("/img/icon-linkedin.svg") no-repeat center;
+}
+
+.twitter,
+.github,
+.linkedin {
+  position: relative;
+  display: inline-block;
+  width: $social;
+  height: $social;
+  background-size: $social;
+  margin: 0 .7rem 1.2rem;
+  opacity: .25;
+  transition: opacity .25s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+footer {
+  flex: 1;
+  width: 100%;
+  background: $black;
+  color: rgba($white, .25);
+  font-family: $lato;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: $spacing 0;
+  p {
+    display: inline-block;
+    letter-spacing: .1rem;
+  }
+  .copyright {
+    &:after {
+      content: "";
+      position: relative;
+      top: -.3rem;
+      display: inline-block;
+      background: rgba($white, .25);
+      width: .2rem;
+      height: .2rem;
+      border-radius: 50%;
+      margin: 0 .5rem;
+    }
+  }
+}

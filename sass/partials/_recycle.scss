@@ -1,0 +1,67 @@
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+
+// these are things that appear in different part of the website but does the same thing
+.section.about,
+.section.portfolio,
+.section.contact {
+  position: relative;
+  display: flex;
+  height: auto;
+  min-height: 40rem;
+  background: $white;
+  padding: $spacing $spacing2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: $navHeight+$spacing;
+}
+
+.about,
+.portfolio,
+.contact {
+  background: $white;
+  text-align: center;
+  h2,
+  p {
+    display: block;
+    max-width: 72rem;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+  h2 {
+    color: $black;
+    font-family: $lora;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: .4rem;
+    @include mobile {
+      font-size: 3rem;
+    }
+    @include tablet {
+      font-size: 3.6rem;
+    }
+  }
+  p {
+    color: rgba($black, 0.6);
+    font-family: $lato;
+    font-size: 1.2rem;
+    //text-transform: uppercase;
+  }
+  br {
+    display: none;
+    @include mobile {
+      display: inline;
+    }
+  }
+}

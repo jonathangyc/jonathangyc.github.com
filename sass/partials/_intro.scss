@@ -1,0 +1,112 @@
+.intro {
+  @include display-flex;
+  background: url("/img/background-intro.jpg") fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  @include box-sizing(border-box);
+  h1, p {
+    display: inline;
+    color: $white;
+    font-family: $lora;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5;
+    @include mobile {
+      font-size: 3rem;
+    }
+    @include tablet {
+      font-size: 3.6rem;
+    }
+  }
+  p {
+    display: inline;
+  }
+  .headline {
+    position: relative;
+    max-width: 82rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.intro-gradient {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: linear-gradient(115deg, rgba(#66cc6b, .6) 0%, rgba(#66cc6b, 0) 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.intro-hint {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // background: #000;
+  text-align: center;
+  font-family: $lato;
+  opacity: .3;
+  a {
+    display: inline-block;
+    color: $white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  span {
+    position: relative;
+    top: 3rem;
+    @include mobile {
+      top: auto;
+    }
+  }
+  .icon-mouse {
+    position: relative;
+    top: 0;
+    display: block;
+    width: 2.2rem;
+    height: 3.8rem;
+    //background: url('/img/icon-mouse.svg') no-repeat center;
+    margin: .4rem auto 2rem;
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: inherit;
+      height: inherit;
+      background: url('/img/icon-down.svg') no-repeat center;
+      background-size: 40%;
+      margin-top: -1.9rem;
+    }
+    &:after {
+      margin-top: -1.4rem;
+    }
+    @include mobile {
+      background: url('/img/icon-mouse.svg') no-repeat center;
+      background-size: 1.4rem;
+    }
+  }
+}
+
+.section,
+.showcase.intro {
+  position: relative;
+  @include display-flex;
+  height: 100%;
+  min-height: 48rem;
+  //min-height: 400px;
+  padding: $spacing2;
+  align-items: center;
+  justify-content: center;
+  @include box-sizing(border-box);
+}

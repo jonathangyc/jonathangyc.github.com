@@ -3,7 +3,6 @@ _site
 
 # ignore sawce
 _sawce
-sass
 
 # ...
 .DS_Store

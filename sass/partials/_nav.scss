@@ -1,0 +1,199 @@
+.logo {
+  position: absolute;
+  left: 50%;
+  width: $navHeight;
+  height: $navHeight;
+  margin: 0 0 0 (-$navHeight/2);
+  @include mobile {
+    width: $navHeight2;
+    height: $navHeight2;
+    margin: 0 0 0 (-$navHeight2/2);  
+  }
+}
+
+.logo,
+.logo-frame,
+.logo-icon {
+  display: block;
+  box-sizing: border-box;
+}
+
+.logo-frame,
+.logo-icon {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.logo-frame {
+  //border: solid $white .1rem;
+  //border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.logo-icon {
+  position: absolute;
+  top: 0;
+  background: url('/img/logoJC-dark.svg') no-repeat center;
+  background-size: $navHeight/2;
+  @include mobile {
+    background: url('/img/logoJC-white.svg') no-repeat center;
+    background-size: auto;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: rgba($white, .95);
+  width: 100%;
+  height: $navHeight;
+  font-size: 0px; // get rid of that weird spacing
+  font-family: $lato;
+  z-index: 69;
+  @include transition(all 0.4s);
+  @include mobile {
+    position: absolute;
+    background: transparent;
+    height: $navHeight2;
+  }
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+    @include transition(all .25s);
+    &.nav-left, &.nav-right {
+      width: 50%;
+      li {
+        @include transition(all .25s);
+      }
+    }
+    &.nav-left {
+      text-align: right;
+      padding-left: $navSpacing;
+      li {
+        margin-right: $navSpacing;
+        @include mobile {
+          margin-right: $navSpacing2;
+        }
+        @include tablet {
+          margin-right: $navHeight2;
+        }
+      }
+      li:last-child {
+        margin-right: $navSpacing + $navHeight/2;
+        @include mobile {
+          margin-right: $navSpacing2 + $navHeight2/2; 
+        }
+        @include tablet {
+          margin-right: $navHeight2 + $navHeight2/2;
+        }
+      }
+    }
+    &.nav-right {
+      text-align: left;
+      padding-right: $navSpacing/2;
+      li {
+        margin-left: $navSpacing;
+        @include mobile {
+          margin-left: $navSpacing2;
+        }
+        @include tablet {
+          margin-left: $navHeight2;
+        }
+      }
+      li:nth-child(1) {
+        margin-left: $navSpacing + $navHeight/2;
+        @include mobile {
+          margin-left: $navSpacing2 + $navHeight2/2;
+        }
+        @include tablet {
+          margin-left: $navHeight2 + $navHeight2/2;
+        }
+      }
+    }
+  }
+  li {
+    font-size: 0px; // reset
+    display: inline-block;
+    height: $navHeight;
+    @include mobile {
+      height: $navHeight2;
+    }
+    a {
+      display: inline-block;
+      position: relative;
+      height: inherit;
+      color: $black;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1rem;
+      line-height: $navHeight;
+      text-transform: uppercase;
+      text-decoration: none;
+      &::before {
+        content: '';
+        display: block; 
+        position: absolute;
+        left: -.05rem;
+        bottom: 1.3rem;
+        width: 100%;
+        height: .1rem;
+        background: $black;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.1s;  
+      }
+      @include mobile {
+        color: $white;
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        line-height: $navHeight2;
+        &::before {
+          background: $white;
+          bottom: 1.8rem;
+        }
+      }
+    }
+    &.active a::before,
+    &:hover a::before {
+      transform: scale3d(1, 1, 1);
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.3s;
+    }
+  }
+}
+
+.nav-light,
+.nav-sticky {
+  //position: fixed;
+  background: rgba($white, 0.95);
+  //box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
+  .logo-icon {
+    background: url('/img/logoJC-dark.svg') no-repeat center;
+    background-size: $navHeight/2;
+    @include mobile {
+      background-size: auto;
+    }
+  }
+  li {
+    a {
+      color: $black;
+      &::before {
+        background: $black;
+      }
+    }
+  }
+}
+
+.nav-sticky {
+  display: none;
+  position: fixed;
+  top: -$navHeight2;
+  height: $navHeight2;
+  opacity: 1 !important; // hack hack
+  @include mobile {
+    display: block;
+  }
+}

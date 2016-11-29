@@ -1,0 +1,77 @@
+.contact-info {
+  text-align: center;
+  padding-bottom: $spacing;
+  .container {
+    display: inline-block;
+    width: 31rem; // hacking makes feel sad :(
+    max-width: 70rem;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0 $spacing2;
+    &:nth-child(2) {
+      padding: 0 0 $spacing;
+    }
+    @include mobile {
+      display: flex;
+      width: auto;
+      flex-wrap: wrap;
+    }
+  }
+  .child {
+    flex: 1 auto;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 2rem;
+    $icon-size: 3.2rem;
+    img {
+      position: absolute;
+      top: 50%;
+      width: $icon-size;
+      transform: translateY(-50%);
+      transition: all .25s;
+      @include filter(grayscale(100%) contrast(0));
+    }
+    @include mobile {
+      display: flex;
+      &:nth-child(2n) {
+        justify-content: flex-end;
+      }
+    }
+    @include tablet {
+      
+    }
+    span {
+      color: $black;
+      font-family: $lora;
+      font-size: 1.8rem;
+      font-style: italic;
+      text-decoration: none;
+      margin-left: $icon-size + $spacing2;
+      border-bottom: solid 1px $black-lightest;
+      transition: all .25s;
+    }
+    a {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+    em {
+      color: $black50;
+      padding: 0 .2rem;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1) translateY(-50%);
+        @include filter(grayscale(0));
+      }
+      span {
+        color: $pink;
+        border-bottom: solid 1px $black-lighter;
+      }
+    }
+  }
+}

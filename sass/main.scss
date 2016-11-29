@@ -1,0 +1,19 @@
+// let's go compass baby
+@import "compass/css3";
+
+// main variables and base reset
+@import "partials/base";
+
+// get the reusable elements in
+@import "partials/recycle";
+
+// web parts
+@import "partials/nav";
+@import "partials/intro";
+@import "partials/portfolio";
+@import "partials/showcase";
+@import "partials/about";
+@import "partials/contact";
+@import "partials/footer";
+
+

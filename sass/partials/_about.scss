@@ -1,0 +1,105 @@
+.about-intro {
+  position: relative;
+  p {
+    color: $black50;
+    font-family: $lato;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  padding: 0 0 $spacing2;
+}
+
+.about-traits {
+  background: $white;
+  .container {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
+    //border-bottom: solid 1px transparent;
+    //border-top: solid 1px $black-lightest;
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+  .child {
+    position: relative;
+    flex: 1 auto;
+    width: 100%;
+    text-align: center;
+    padding: $spacing2;
+    border-top: solid 1px $black-lightest;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 0;
+    &:last-child{
+      border-bottom: none;
+    }
+    @include mobile {
+      width: 50%;
+      padding: $spacing $spacing2;
+      border-right: solid 1px $black-lightest;
+      &:nth-child(2n){
+        border-right: none;
+      }
+    }
+    @include desktop{
+      width: 33%;
+      // padding: $spacing $spacing2;
+      &:nth-child(2n){
+        border-right: solid 1px $black-lightest;
+      }
+      &:nth-child(3n){
+        border-right: none;
+      }
+    }
+    img {
+      width: 14rem;
+      height: 7rem;
+      max-width: 100%;
+      @include mobile {
+        width: 16rem;
+        height: 8rem;
+      }
+      @include desktop {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
+    h3,
+    p {
+      color: $black;
+      font-family: $lato;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      &:after {
+        content: "";
+        display: block;
+        width: 4rem;
+        height: .1rem;
+        background: $black-lighter;
+        margin: 2rem auto;
+      }
+    }
+    p {
+      max-width: 48rem;
+      font-size: 1.3rem;
+      margin: 0 auto;
+      @include tablet {
+        font-size: 1.4rem;
+      }
+    }
+    em {
+      color: $black-light;
+    }
+  }
+}

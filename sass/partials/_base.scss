@@ -1,0 +1,97 @@
+$pink:                #cc1f67;              // pink pink
+$green:               #66cc6b;              // i dont know why i chose this green
+$black:               #333333;              // print black
+$gradient:            #222222;              // gradient uses a darker shade of black
+$nomicYellow:         #ffd706;              // classic nomic
+$buildingConnected:   #31708F;              // classic bc
+$davidandmelanie:     #8fb3b1;              // melanie likes this color
+$white:               #fafafa;              // white as snow
+$black-lightest:      darken($white, 7%);   
+$black-lighter:       darken($white, 15%);  
+$black-light:         darken($white, 20%);
+$black50:             lighten($black, 50%);
+//
+$spacing:             4rem;
+$spacing2:            3rem;
+$navSpacing:          1.25rem;
+$navSpacing2:         3rem;
+$navHeight:           5rem;
+$navHeight2:          7rem;
+$social:              3rem;
+//
+$breakpoint-mobile:   500px;
+$breakpoint-tablet:   768px;
+$breakpoint-desktop:  1000px;
+
+// typography
+$lora:        "Lora", serif;
+$lato:        "Lato", sans-serif;
+
+// media mixin it up
+@mixin mobile {
+  @media screen and (min-width: #{$breakpoint-mobile}){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$breakpoint-tablet}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$breakpoint-desktop}){
+    @content;
+  }
+}
+
+
+// what are these animations
+@keyframes fadeItBaby {
+    0% { opacity: 0; }
+    100%    { opacity: 1; }
+}
+@-webkit-keyframes fadeItBaby {
+    0% { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+// base reset
+h1,h2,h3,p  {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: $white;
+  font-size: 62.5%;
+  ‑webkit‑text‑size‑adjust: 100%; // fix iOS landscape views
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.6;
+  animation: fadeItBaby .45s ease-in;
+  //-webkit-backface-visibility: hidden;
+  //-webkit-transform: translate3d(0, 0, 0);
+}
+
+// footer stay at the bottom for tall screens and when not enough content
+.wrapper {
+  display: flex;
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+p {
+  letter-spacing: .02rem;
+}
