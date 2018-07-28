@@ -2,6 +2,6 @@
 name:         Jonathan Chen / UI &amp; UX Designer
 description:  My Personal Site
 
-baseurl:      http://jonathanc.com
+baseurl:      https://jonathanc.com
 permalink:    pretty
 exclude:      ["CNAME", "README.md", "Gemfile", "Gemfile.lock"]
