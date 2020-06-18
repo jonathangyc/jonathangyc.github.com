@@ -4,4 +4,4 @@ description:  My Personal Site
 
 baseurl:      https://jonathanc.com
 permalink:    pretty
-exclude:      ["CNAME", "README.md", "Gemfile", "Gemfile.lock"]
+exclude:      [".gitignore", "CNAME", "README.md", "Gemfile", "Gemfile.lock", "node_modules", "sass", "config.rb", "package.json", "package-lock.json"]
