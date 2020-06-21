@@ -1,11 +1,11 @@
 .intro {
-  @include display-flex;
+  display: flex;
   background: url("/img/background-intro.jpg") fixed;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   h1, p {
     display: inline;
     color: $white;
@@ -26,7 +26,7 @@
   }
   .headline {
     position: relative;
-    max-width: 82rem;
+    max-width: 90rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -101,12 +101,12 @@
 .section,
 .showcase.intro {
   position: relative;
-  @include display-flex;
+  display: flex;
   height: 100%;
   min-height: 48rem;
   //min-height: 400px;
   padding: $spacing2;
   align-items: center;
   justify-content: center;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }

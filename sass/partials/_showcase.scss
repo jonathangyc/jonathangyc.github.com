@@ -17,6 +17,8 @@
   background: rgba($gradient, 0.55);
 }
 
+.crowdbank,
+.coolwallets,
 .nomic,
 .buildingconnected,
 .davidandmelanie,
@@ -32,7 +34,7 @@
   text-align: center;
   text-decoration: none;
   z-index: 1;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   h2, p {
     margin: 0;
     padding: 0;
@@ -78,7 +80,7 @@
     margin: 0 auto;
     overflow: hidden;
     transition: all .2s ease-out;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     @include mobile {
       width: 24rem;
     }
@@ -127,7 +129,7 @@
   text-align: center;
   padding: 0 $spacing2;
   margin: 0 auto;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 .showcase {
@@ -138,7 +140,7 @@
   padding: 0;
   figure,
   img {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -148,7 +150,7 @@
     position: relative;
     background: $white;
     padding: $spacing 0;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     p {
       font-size: 1.4rem;
       text-align: left;
@@ -200,6 +202,8 @@
         color: $black;
       }
     }
+    &.crowdbank,
+    &.coolwallets,
     &.buildingconnected {
       a {
         color: $white;
@@ -233,6 +237,8 @@
 .synopsis {
   border-bottom: solid 1px $black-lightest;
   background: $pink;
+  &.crowdbank,
+  &.coolwallets,
   &.nomic,
   &.buildingconnected,
   &.davidandmelanie,
@@ -240,9 +246,8 @@
     background-image: none !important;
     border-bottom: none;
   }
-  &.nomic {
-    background: $nomicYellow;
-  }
+  &.crowdbank, 
+  &.coolwallets, 
   &.buildingconnected,
   &.davidandmelanie,
   &.jonathanchen {
@@ -250,6 +255,15 @@
     h3:after {
       background: rgba($white, 0.25);
     }
+  }
+  &.crowdbank {
+    background: $crowdbank;
+  }
+  &.coolwallets {
+    background: $coolwallets;
+  }
+  &.nomic {
+    background: $nomicYellow;
   }
   &.buildingconnected {
     background: $buildingConnected;
@@ -275,7 +289,7 @@
     width: 100%;
     max-width: 62rem;
     padding: 0 0 $spacing2 0;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     @include tablet {
       width: 35%;
       padding-right: $spacing2;
@@ -328,13 +342,23 @@
   figure {
     position: relative;
     margin-bottom: 2rem;
+    transition: .25s;
     &:last-child {
       margin-bottom: 0;
+    }
+    &:hover {
+      box-shadow: 
+        0 4px 12px rgba(0,0,0, 0.05),
+        0 8px 40px rgba(0,0,0, 0.08);
+    }
+    &.ns {
+      box-shadow: none !important;
     }
   }
 }
 
-div.iphone {
+.iphone,
+.iphoneX {
   position: relative;
 }
 
@@ -350,7 +374,7 @@ div.iphone {
     position: absolute;
     top: 13%;
     padding: 0 8% 0 9%;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     z-index: 1;
   }
   img.iphone {
@@ -363,6 +387,18 @@ div.iphone {
   &:nth-child(3) {
     margin-right: 0;
     margin-bottom: 2rem;
+  }
+}
+
+.iphoneX figure {
+  display: inline-block;
+  @include mobile {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(3) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -403,7 +439,7 @@ $browserurl: 1.8rem;
   background: $white;
   margin: 0 auto;
   border-radius: $browserurl;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   opacity: 0;
   @include tablet {
     opacity: 1;

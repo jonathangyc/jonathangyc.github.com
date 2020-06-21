@@ -31,7 +31,7 @@
       width: $icon-size;
       transform: translateY(-50%);
       transition: all .25s;
-      @include filter(grayscale(100%) contrast(0));
+      filter: grayscale(100%) contrast(0);
       @include mobile {
         position: relative;
       }
@@ -72,7 +72,7 @@
     &:hover {
       img {
         transform: scale(1.1) translateY(-50%);
-        @include filter(grayscale(0));
+        filter: grayscale(0);
       }
       span {
         color: $pink;

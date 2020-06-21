@@ -131,6 +131,8 @@ $(document).ready(function(){
   }
 
   // setup parallax effects for the latest projects if available
+  $(".crowdbank").parallax({imageSrc: "/img/crowdbank.jpg"});
+  $(".coolwallets").parallax({imageSrc: "/img/coolwallets.jpg"});
   $(".nomic").parallax({imageSrc: "/img/nomic.jpg"});
   $(".buildingconnected").parallax({imageSrc: "/img/buildingconnected.jpg"});
   $(".davidandmelanie").parallax({imageSrc: "/img/davidandmelanie.jpg"});

@@ -51,7 +51,7 @@ nav {
   font-size: 0px; // get rid of that weird spacing
   font-family: $lato;
   z-index: 69;
-  @include transition(all 0.4s);
+  transition: all 0.4s;
   @include mobile {
     position: absolute;
     background: transparent;
@@ -62,12 +62,12 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    @include box-sizing(border-box);
-    @include transition(all .25s);
+    box-sizing: border-box;
+    transition: all .25s;
     &.nav-left, &.nav-right {
       width: 50%;
       li {
-        @include transition(all .25s);
+        transition: all .25s;
       }
     }
     &.nav-left {
